@@ -1,8 +1,22 @@
-import React from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Test from './Test';
+
+const App = () => {
+  return (
+    <div>
+      {
+        /* 
+          Got to Test.js and change the text, 
+          observe the change will reflect on the UI, 
+          but changing the text in below div wouldn't reload automatically. 
+        */
+      }
+      <Test />
+      <div>Changing this line wouldn't hot reload.</div>
+    </div>
+  );
+}
 
 ReactDOM.render(
   <React.StrictMode>
@@ -10,8 +24,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
